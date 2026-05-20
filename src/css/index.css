@@ -13,16 +13,18 @@ border-radius: 8px;
 background-color: red;
 }
 
-#popover {
+.popover {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 300;
   position: absolute;
+  opacity: 0;
+  pointer-events: none;
   width: 300px;
   min-height: 80px;
   background: #fff;
   border: 1px solid lightgray;
   border-radius: 6px;
-  z-index: 1;
+  z-index: 100;
 }
 
 .popover-title {
@@ -62,6 +64,7 @@ background-color: red;
   border-color: lightgray transparent transparent transparent;
 }
 
-.hidden {
-  display: none;
+.popover.open {
+  opacity: 1;
+  pointer-events: auto;
 }
